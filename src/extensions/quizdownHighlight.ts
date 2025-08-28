@@ -8,6 +8,8 @@ import python from 'highlight.js/lib/languages/python';
 import typescript from 'highlight.js/lib/languages/typescript';
 import xml from 'highlight.js/lib/languages/xml';
 import c from 'highlight.js/lib/languages/c';
+import cpp from 'highlight.js/lib/languages/cpp';
+import latex from 'highlight.js/lib/languages/latex';
 import type { QuizdownExtension } from '../quizdown.js';
 
 // this does not work....
@@ -25,6 +27,8 @@ hljs.registerLanguage('python', python);
 hljs.registerLanguage('typescript', typescript);
 hljs.registerLanguage('html', xml);
 hljs.registerLanguage('c', c);
+hljs.registerLanguage('cpp', cpp);
+hljs.registerLanguage('latex', latex);
 
 function highlighter(code, language) {
     const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
